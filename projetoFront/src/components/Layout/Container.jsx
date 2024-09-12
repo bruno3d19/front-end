@@ -1,4 +1,5 @@
 import style from './Container.module.css'
+import NavBar from './NavBar'
 
 const Container = (props)=>{
 

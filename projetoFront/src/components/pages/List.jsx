@@ -5,7 +5,9 @@ function List() {
     return (
         <section className={style.list_container}>
             <NavBar/>
-            <h1>LISTA DE ITEMS</h1>
+            <div className={style.list}>
+                <h1>LISTA DE ITEMS</h1>
+            </div>
         </section>
     )
 }

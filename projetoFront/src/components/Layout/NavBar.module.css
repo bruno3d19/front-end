@@ -1,11 +1,12 @@
 .navbar{
-    font-size: 30px;
+    font-size: 40px;
     display: flex;
     justify-content: space-between;
     background-color: #0c8063;
     padding: 1em;
     margin-top: -450px;
     width: 1860px;
+    height: 120px;
 }
 
 /* REGRA DA LISTA DE LIVROS */

@@ -1,0 +1,8 @@
+.cad_item{
+    background-color: seagreen;
+    height: 500px;
+    width: 400px;
+    margin-left: 700px;
+    border-radius: 50px;
+    text-align: center;
+}

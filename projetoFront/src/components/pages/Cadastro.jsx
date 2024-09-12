@@ -7,35 +7,41 @@ import Button from '../Forms/Button'
 
 function Cadastro() {
     return (
-        <section className={style}>
+        
+        <section>
+
             <NavBar/>
+            <div className={style.cad_item}>
             <h1>CADASTRO</h1>
 
             <Input
                 type='text'
-                name='txt_livro'
-                placeHolder='Digite o nome do livro aqui'
-                text='Titulo do livro'
+                name='txt_item'
+                placeHolder='Digite o nome do item aqui'
+                text='Titulo do item'
             />
 
             <Input  
                 type='text'
-                name='txt_descricao_livro'
-                placeHolder='Digite a descrição do livro'
-                text='Descrição do livro'
+                name='txt_descricao_item'
+                placeHolder='Digite a descrição do item'
+                text='Descrição do item'
             />
 
             <Select
                 name='categoria'
-                text='Escolha uma categoria de livro'
+                text='Escolha uma categoria de items'
             />
 
             <Button
-                rotulo='Cadastrar Livro'
+                rotulo='Cadastrar item'
             />
+
+            </div>
 
 
         </section>
+        
     )
 }
 
