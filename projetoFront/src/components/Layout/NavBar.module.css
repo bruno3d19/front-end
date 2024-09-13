@@ -3,10 +3,12 @@
     display: flex;
     justify-content: space-between;
     background-color: #0c8063;
-    padding: 1em;
-    margin-top: -450px;
-    width: 1860px;
-    height: 120px;
+    padding: 0;
+    margin: 0 auto;
+    width: 0 auto;
+    height: 0 auto;
+    text-align: center;
+    align-items: center;
 }
 
 /* REGRA DA LISTA DE LIVROS */
@@ -14,11 +16,11 @@
     display: flex;
     list-style: none;
     align-items: center;
-    justify-content: space-between;
 }
 
 /* REGRAS DE LINKS */
 .item{
     margin-right: 1em;
     color: #fff;
+    text-align: center;
 }
