@@ -4,9 +4,9 @@
     justify-content: space-between;
     background-color: #0c8063;
     padding: 0;
-    margin: 0 auto;
-    width: 0 auto;
-    height: 0 auto;
+    margin-top: -300px;
+    width: 1350px;
+    height: 200px;
     text-align: center;
     align-items: center;
 }
