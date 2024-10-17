@@ -7,17 +7,19 @@ import Input from '../Forms/Input'
 import Select from '../Forms/Select' 
 import Button from '../Forms/Button' 
 
-const Cadastro = (handleSubmit, projectData) => {
+const Cadastro = (itemData) => {
 
-    const [categorias, setCategorias] = useState([])
-    const [project, setProject] =useState(projectData || {})
+    const [cadastro, setCadastro] = useState([])
+
+    const [item, setItem] =useState(itemData || {})
 
     function handleChange(e) {
-        setProject({ ...project, [e.target.name]: e.target.value })
+        setItem({ ...item, [e.target.name]: e.target.value })
+        console.log(item)
     }
 
     useEffect(() =>{
-        fetch("http://localhost:5000/categorias", {
+        fetch("http://localhost:5000/listagemCadastro", {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json',
@@ -31,20 +33,20 @@ const Cadastro = (handleSubmit, projectData) => {
                     resp.json()
                 ).then(
                     (data) =>{
-                        console.log('DATA: ' + data.data[3].categorias)
-                setCategorias(data.data)
+                        console.log('DATA: ' + data.data[3].cadastro)
+                setCadastro(data.data)
             })
             .catch((err) => console.log(err))
     }, []);
 
-    function createPost (project) {
+    function createPost (item) {
 
-        console.log(JSON.stringify(project))
+        console.log(JSON.stringify(item))
 
         // project.cost = 0
         // project.services = []
 
-        fetch("http://localhost:5000/categorias" ,{
+        fetch("http://localhost:5000/inserirItem" ,{
             method:'POST',
             mode:'cors',
             headers:{
@@ -52,7 +54,7 @@ const Cadastro = (handleSubmit, projectData) => {
             'Access-Control-Allow-Origin':'*',
             'Access-Control-Allow-Headers':'*'
             },
-            body: JSON.stringify(project)
+            body: JSON.stringify(item)
         })
         .then(
             (resp)=>resp.json()
@@ -60,7 +62,7 @@ const Cadastro = (handleSubmit, projectData) => {
 .then(
             (data)=>{
             console.log(data);
-        // navigate('/livros',{state:'LIVRO CADASTRADO COM SUCESSO!'});
+        
         }
 )
 .catch(
@@ -72,7 +74,7 @@ const Cadastro = (handleSubmit, projectData) => {
     const submit = (e) => {
         e.preventDefault();
         //console.log(project)
-        createPost(project);
+        createPost(item);
         
     }
 
@@ -89,7 +91,7 @@ const Cadastro = (handleSubmit, projectData) => {
         
         <section>
 
-            {/* <NavBar/> */}
+             <NavBar/> 
             <div className={style.cad_item}>
             <h1>CADASTRO</h1>
 
@@ -114,7 +116,7 @@ const Cadastro = (handleSubmit, projectData) => {
             <Select
                 name='categoria' 
                 text='Escolha uma categoria de items' 
-                options={categorias}
+                options={cadastro}
                 // handleOnChange={handleCategory}
                 // value={project.category ? project.category.id : ''}
             />
