@@ -1,0 +1,51 @@
+{
+  "projects": [],
+  "categorias": [
+    {
+      "id": "1",
+      "name": "HQS"
+    },
+    {
+      "id": "2",
+      "name": "MANGÁS"
+    },
+    {
+      "id": "3",
+      "name": "FIGURE"
+    },
+    {
+      "id": "4",
+      "name": "POSTERS"
+    },
+    {
+      "id": "f066",
+      "txt_item": "Tate no Yusha",
+      "txt_descricao_item": "Livro"
+    },
+    {
+      "id": "8ada",
+      "txt_item": "dandadan",
+      "txt_descricao_item": "Livro"
+    },
+    {
+      "id": "5db3",
+      "txt_item": "black clover",
+      "txt_descricao_item": "Livro"
+    },
+    {
+      "id": "293b",
+      "txt_item": "dr. stone",
+      "txt_descricao_item": "Livro"
+    },
+    {
+      "id": "5ca1",
+      "txt_item": "hunter x hunter",
+      "txt_descricao_item": "Livro"
+    },
+    {
+      "id": "9f64",
+      "txt_item": "Dragon ball Z",
+      "txt_descricao_item": "Livro"
+    }
+  ]
+}
