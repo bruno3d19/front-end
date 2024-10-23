@@ -10,7 +10,7 @@ import Button from "../Forms/Button";
 const CreateItens = ()=>{
 
     //DEFINE O STATE DA DADOS DAS CATEGORIAS
-    const [categorias, setCategorias] = useState([])
+    const [cadastro, setCadastro] = useState([])
 
     /* STATE DE DADOS QUE VAI ARMAZENAR O OBJETO JSON DE LIVRO */
     const [item, setItem] = useState({})
@@ -45,7 +45,7 @@ const CreateItens = ()=>{
         ).then(
             (data)=>{
                 console.log('DATA: ' + data.data[3].nome_cadastro)
-                setCategorias(data.data)
+                setCadastro(data.data)
             }
         ).catch(
             (error)=>{
@@ -123,7 +123,7 @@ const CreateItens = ()=>{
             <Select
                 name='categoria'
                 text='Escolha uma categoria de item'
-                options={categorias}
+                options={cadastro}
                 handleChangeCategory={handleChangeCategory}
             />
 

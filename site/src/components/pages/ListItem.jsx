@@ -8,6 +8,7 @@ import ItemCard from '../CardItem'
 import Container from '../layout/Container'
 import ContainerItem from "../Layout/ContainerItem";
 
+import imagens from '../../assets/imagens/blackClover.jpeg'
 // import cavernas from '../../assets/livros/cavernas_aco.jpg'
 
 const ListItem = ()=>{
@@ -17,7 +18,7 @@ const ListItem = ()=>{
     /* RECUPERA OS DADOS DOS LIVROS DO BACKEND */
     useEffect(()=>{
 
-        fetch('http://localhost:5000/listagemLivros', {
+        fetch('http://localhost:5000/listagemCadastro', {
             method: 'GET',
             mode:'cors',
             headers:{
@@ -49,10 +50,10 @@ const ListItem = ()=>{
                         itens.map((item)=>(
                             // console.log(book.nome_livro)
                             <ItemCard
-                                titulo={item.nome_livro}
-                                autor={item.autor_livro}
-                                imagem={cavernas}
-                                key={item.cod_livro}
+                                titulo={item.nome_cadastro}
+                                autor={item.autor_cadastro}
+                                imagem={imagens}
+                                key={item.cod_cadastro}
                             />
                         ))
                     }
