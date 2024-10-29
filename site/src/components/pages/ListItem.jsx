@@ -18,7 +18,7 @@ const ListItem = ()=>{
     /* RECUPERA OS DADOS DOS LIVROS DO BACKEND */
     useEffect(()=>{
 
-        fetch('http://localhost:5000/listagemCadastro', {
+        fetch('http://localhost:5000/listagemItens', {
             method: 'GET',
             mode:'cors',
             headers:{
@@ -50,7 +50,7 @@ const ListItem = ()=>{
                         itens.map((item)=>(
                             // console.log(book.nome_livro)
                             <ItemCard
-                                titulo={item.nome_cadastro}
+                                titulo={item.nome_item}
                                 autor={item.autor_cadastro}
                                 imagem={imagens}
                                 key={item.cod_cadastro}
