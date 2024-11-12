@@ -53,6 +53,7 @@ const ListItem = ()=>{
                                 titulo={item.nome_item}
                                 autor={item.autor_cadastro}
                                 imagem={imagens}
+                                cod_item={item.cod_item}
                                 key={item.cod_cadastro}
                             />
                         ))

@@ -13,6 +13,7 @@ import Container from './components/Layout/Container'
 import Home from './components/pages/Home'
 import ListItem from './components/pages/ListItem'
 import CreateItem from './components/pages/CreateItem'
+import DetailItem from './components/pages/DetailItem'
 
 function App() {
 
@@ -31,6 +32,8 @@ function App() {
               <Route path='/' element={<Home/>}/>
               <Route path='listItem' element={<ListItem/>}/>
               <Route path='createItem' element={<CreateItem/>}/>
+              <Route path='/detailItem/:cod_item' element={<DetailItem/>}/>
+
             </Route>
 
           </Routes>
