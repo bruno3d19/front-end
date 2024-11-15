@@ -53,10 +53,14 @@ const DetailItem = () => {
                     <div className={style.container_buttons}>
                         <Button 
                             label='EDITAR'
+                            router='/updateItens/'
+                            cod_item={item.cod_item}
                         />
     
                         <Button 
                             label='EXCLUIR'
+                            router='/deleteItem/'
+                            cod_item={item.cod_item}
                         />
     
                     </div>

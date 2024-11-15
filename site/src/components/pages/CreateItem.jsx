@@ -101,7 +101,7 @@ const CreateItens = ()=>{
                 name='nome_item'
                 placeHolder='Digite o nome do item aqui'
                 text='Titulo do item'
-                handleChangeItem={handlerChangeItem}
+                handlerChangeItem={handlerChangeItem}
             />
 
             <Input  
@@ -109,7 +109,7 @@ const CreateItens = ()=>{
                 name='autor_item'
                 placeHolder='Digite o nome do autor'
                 text='Nome do autor'
-                handleChangeItem={handlerChangeItem}
+                handlerChangeItem={handlerChangeItem}
             />
 
             <Input  
@@ -117,7 +117,7 @@ const CreateItens = ()=>{
                 name='descricao_item'
                 placeHolder='Digite a descrição do item'
                 text='Descrição do item'
-                handleChangeItem={handlerChangeItem}
+                handlerChangeItem={handlerChangeItem}
             />
 
             <Select
