@@ -9,13 +9,11 @@ import Container from '../layout/Container'
 import ContainerItem from "../Layout/ContainerItem";
 
 import imagens from '../../assets/imagens/blackClover.jpeg'
-// import cavernas from '../../assets/livros/cavernas_aco.jpg'
 
 const ListItem = ()=>{
 
     const [itens, setItens] = useState([]);
 
-    /* RECUPERA OS DADOS DOS LIVROS DO BACKEND */
     useEffect(()=>{
 
         fetch('http://localhost:5000/listagemItens', {
@@ -48,7 +46,6 @@ const ListItem = ()=>{
                  <ContainerItem> 
                     {
                         itens.map((item)=>(
-                            // console.log(book.nome_livro)
                             <ItemCard
                                 titulo={item.nome_item}
                                 autor={item.autor_cadastro}

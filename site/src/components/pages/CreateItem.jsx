@@ -9,27 +9,22 @@ import Button from "../Forms/Button";
 
 const CreateItens = ()=>{
 
-    //DEFINE O STATE DA DADOS DAS CATEGORIAS
     const [cadastro, setCadastro] = useState([])
 
-    /* STATE DE DADOS QUE VAI ARMAZENAR O OBJETO JSON DE LIVRO */
     const [item, setItem] = useState({})
 
     
-    /* HANDLER DE CAPTURA DOS DADOS DE INPUT (NOME DO LIVRO, AUTOR E DESCRIÇÃO) */
     function handlerChangeItem(event) {
         setItem({...item, [event.target.name] : event.target.value});
         console.log(item)
     }
 
-     /* CAPTURA OS DADOS DA SELECT */
      function handleChangeCategory(event) {
         setItem({...item, cod_cadastro: event.target.value});
         console.log(item);
     }
 
 
-    //RECUPERA OS DADOS DE CATEGORIA DA APIREST
     useEffect(()=>{
         fetch('http://localhost:5000/listagemCadastro', {
             method:'GET',
@@ -40,7 +35,6 @@ const CreateItens = ()=>{
             }
         }).then(
             (resp)=>
-                // console.log('RESPOSTA' + resp)
                 resp.json()
         ).then(
             (data)=>{
@@ -54,7 +48,6 @@ const CreateItens = ()=>{
         )
     }, []);
 
-    /* INSERÇÃO DOS DADOS DE LIVRO */
     function CreateItem(item) {
         
         console.log(JSON.stringify(item))
@@ -75,7 +68,6 @@ const CreateItens = ()=>{
         .then(
                     (data)=>{
                     console.log(data);
-                // navigate('/livros',{state:'LIVRO CADASTRADO COM SUCESSO!'});
                 }
         )
         .catch(
@@ -83,7 +75,6 @@ const CreateItens = ()=>{
         )
     }
 
-            /* FUNÇÃO DE SUBMIT */
                 function submit(event) {
                     event.preventDefault();
                     CreateItem(item);

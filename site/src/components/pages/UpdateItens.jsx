@@ -9,31 +9,24 @@ import Button from '../Forms/Button'
 
 const UpdateItens = () => {
 
-        /* CRIAÇAO DO STATE DOS DADOS DOS LIVROS */
         const [item, setItem] = useState([]);
 
-        /* RECUPERA O CÓDIGO ENVIADO PELO BOTÃO */
         const {cod_item} = useParams();
 
-        /* OBJETO DE NAVEGAÇÃO */
         const navigate = useNavigate();
 
-        /* STATE DE DADOS DAS CATEGORIAS VINDAS DO ARQUIVO db.json */
         const [cadastro, setCadastro] = useState([])
 
-        /* HANDLER DE CAPTURA DOS DADOS DE INPUT (NOME DO LIVRO, AUTOR E DESCRIÇÃO) */
         function handlerChangeItem(event) {
                 setItem({...item, [event.target.name] : event.target.value});
                 console.log(item)
         }
 
-        /* CAPTURA OS DADOS DA SELECT */
         function handleChangeCategory(event) {
                 setItem({...item, cod_cadastro: event.target.value});
                 console.log(item);
             }
 
-        /* RECUPERA OS DADOS DE CATEGORIA DO BANCO DADOS */
         useEffect(()=>{
                 fetch('http://localhost:5000/listagemCadastro', {
                     method:'GET',
@@ -48,7 +41,6 @@ const UpdateItens = () => {
                 ).then(
                         (data)=>{
                         setCadastro(data.data);
-                        // console.log('TESTE-DATA:' + data.data);
                         }
                 ).catch(
                         (error)=>{
@@ -57,7 +49,6 @@ const UpdateItens = () => {
                 )
         }, [])
 
-        /* RECUPERA OS DADOS DO LIVRO DO BACKEND */
         useEffect(()=>{
 
                 fetch(`http://localhost:5000/listagemItens/${cod_item}`, {
@@ -79,7 +70,6 @@ const UpdateItens = () => {
 
         }, []);
 
-        /* ALTERAÇÃO DOS DADOS DE LIVRO */
         function UpdateItem(item) {
         
                 console.log(JSON.stringify(item))
@@ -108,7 +98,6 @@ const UpdateItens = () => {
                 )
         }
 
-        /* FUNÇÃO DE SUBMIT */
         function submit(event) {
                 event.preventDefault();
                 UpdateItem(item);

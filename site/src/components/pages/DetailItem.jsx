@@ -6,14 +6,11 @@ import imagens from '../../assets/imagens/blackClover.jpeg'
 
 const DetailItem = () => {
 
-    //RECUPERA O CODIGO DO LIVRO
     const {cod_item} = useParams()
     console.log('CODIGO DO ITEM' + cod_item)
 
-    //CRIAÇÃO DA STATE DOS DADOS DO LIVROS
     const[item, setItem] = useState({})
 
-    /* RECUPERANDO OS DADOS DE LIVRO PARA A EDIÇAO */
     useEffect(()=>{
 
         fetch(`http://localhost:5000/listagemItens/${cod_item}`, {

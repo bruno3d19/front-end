@@ -28,7 +28,7 @@ function DeleteItem() {
 
     return (
         <div>
-            {/* <h1>TESTE DE EXCLUSÃO DE LIVRO!!!!</h1> */}
+            {/* <h1>TESTE DE EXCLUSÃO DE ITEM!!!!</h1> */}
         </div>
     )
 }
