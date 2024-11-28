@@ -1,9 +1,10 @@
-.container_book{
-    background-color: #FFF;
+.container_item{
+    background-color: #6e6e6e;
     width: 80%;
     padding: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    border: black solid;
 }

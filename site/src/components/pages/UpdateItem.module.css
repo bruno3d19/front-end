@@ -6,3 +6,9 @@
     justify-content: center;
     padding: 4em;
 }
+.form{
+    background-color: aquamarine;
+    border-radius: 15px;
+    border: black solid;
+    padding: 0.5em;
+}

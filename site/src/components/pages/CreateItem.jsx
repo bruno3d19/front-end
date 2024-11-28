@@ -85,7 +85,7 @@ const CreateItens = ()=>{
 
             <h1>CADASTRO DE ITENS</h1>
 
-            <form onSubmit={submit}>
+            <form className={style.form}onSubmit={submit}>
 
             <Input
                 type='text'

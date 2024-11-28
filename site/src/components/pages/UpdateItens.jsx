@@ -64,7 +64,7 @@ const UpdateItens = () => {
                 .then((data)=>{
                         console.log('ITENS: ' + data.data.cod_item);
                         setItem(data.data);
-                        console.log('STATE: ' + item.nome_item);
+                        console.log('STATE: ' + item);
                 })
                 .catch((err)=>{console.log(err)});
 
@@ -108,7 +108,7 @@ const UpdateItens = () => {
                         
                         <h1>ALTERAÇÃO DE ITENS</h1>
 
-                        <form onSubmit={submit}>
+                        <form className={style.form}onSubmit={submit}>
 
                                 <Input 
                                         type='text'

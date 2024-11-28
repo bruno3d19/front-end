@@ -4,7 +4,7 @@ import style from './ContainerItem.module.css'
 
 const ContainerItem = (props) => {
     return (
-        <div className={style.container_book}>
+        <div className={style.container_item}>
             {props.children}
         </div>
     )
