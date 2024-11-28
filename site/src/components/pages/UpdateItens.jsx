@@ -64,7 +64,7 @@ const UpdateItens = () => {
                 .then((data)=>{
                         console.log('ITENS: ' + data.data.cod_item);
                         setItem(data.data);
-                        console.log('STATE: ' + item);
+                        console.log('STATE: ' + item.nome_item);
                 })
                 .catch((err)=>{console.log(err)});
 
