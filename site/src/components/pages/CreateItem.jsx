@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import style from './CreateItem.module.css'
 
@@ -8,6 +9,8 @@ import Select from "../Forms/Select";
 import Button from "../Forms/Button";
 
 const CreateItens = ()=>{
+
+    const navigate = useNavigate();
 
     const [cadastro, setCadastro] = useState([])
 
@@ -68,6 +71,7 @@ const CreateItens = ()=>{
         .then(
                     (data)=>{
                     console.log(data);
+                    navigate('/listItem',{state:'ITEM CADASTRADO COM SUCESSO!'});
                 }
         )
         .catch(
